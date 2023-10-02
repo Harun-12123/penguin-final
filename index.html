@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3a9853437.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        button, p, a{
+            font-family: 'Roboto', sans-serif !important;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="px-20 bg-[#FFFBF0;] ">
+        <nav class="sm:flex md:flex hidden flex-col sm:flex-row md:flex-row items-center  justify-between py-3">
+            <div class="logo-area w-64		">
+                <img src="./icons/logo.png" alt=""><a href="#"></a></img>
+            </div>
+            <div class="menu flex">
+                <ul class="flex flex-col sm:flex-row md:flex-row gap-5">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        
+        <div class="navbar sm:hidden md:hidden">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-center">
+              <a class="normal-case text-xl"> <img class="w-[150px]" src="./icons/logo.png" alt=""></a>
+            </div>
+            
+          </div>
+
+
+
+       <div class="flex flex-col sm:flex-row md:flex-row text-center sm:text-left md:text-left items-center justify-between gap-4 mt-20 ">
+            <div class="">
+                <h2 class="text-7xl"><span class="text-[#FABE4C;] uppercase font-normal">Be the Penguins</span><br>
+                    <span class="text-[#363958;]">of Winter</span></h2>
+                    <p class="text-[#3E3E3E;] my-2">Lorem Ipsum is simply dummy text of the <br> printing and typesetting industry.</p>
+                    <button class="px-6 py-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white rounded-md">Buy Now</button>
+            </div>
+            <div>
+                <img src="./images/model.png" alt="">
+            </div>
+       </div>
+    </header>
+    <main>
+        <section class="women-jackets py-10">
+            <div class="container mx-auto px-8">
+                <h3 class="text-5xl mb-4 text-center sm:text-left md:text-left">WoMan Jacket</h3>
+                <div class="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="single-card shadow-lg p-5 rounded-xl">
+                        <div class="card-image bg-[#F1F1F1] p-4 rounded-xl">
+                            <img class="w-9/12 m-auto" src="./images/jacket-1.png" alt="">
+                        </div>
+                        <h4 class="text-2xl mt-6">Yellow Coat Jacket </h4>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="price flex justify-between items-center">
+                            <span class="text-4xl text-[#FABE4C]">$234</span>
+                            <button class="px-6 py-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white rounded-md"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="single-card shadow-lg p-5 rounded-xl">
+                        <div class="card-image bg-[#F1F1F1] p-4 rounded-xl">
+                            <img class="w-9/12 m-auto" src="./images/jacket-2.png" alt="">
+                        </div>
+                        <h4 class="text-2xl mt-6 text-center sm:text-left md:text-left">Ladies Jacket </h4>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="price flex justify-between items-center">
+                            <span class="text-4xl text-[#FABE4C]">$234</span>
+                            <button class="px-6 py-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white rounded-md"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="single-card shadow-lg p-5 rounded-xl">
+                        <div class="card-image bg-[#F1F1F1] p-4 rounded-xl">
+                            <img class="w-9/12 m-auto" src="./images/jacket-3.png" alt="">
+                        </div>
+                        <h4 class="text-2xl mt-6 ">Woman Leather Jacket </h4>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="price flex justify-between items-center">
+                            <span class="text-4xl text-[#FABE4C]">$234</span>
+                            <button class="px-6 py-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white rounded-md"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="single-card md:hidden shadow-lg p-5 rounded-xl">
+                        <div class="card-image bg-[#F1F1F1] p-4 rounded-xl">
+                            <img class="w-9/12 m-auto" src="./images/jacket-1.png" alt="">
+                        </div>
+                        <h4 class="text-2xl mt-6">Yellow Coat Jacket </h4>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="price flex justify-between items-center">
+                            <span class="text-4xl text-[#FABE4C]">$234</span>
+                            <button class="px-6 py-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white rounded-md"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="women-jackets py-10">
+            <div class="container mx-auto px-8">
+                <h3 class="text-5xl mb-4 text-center sm:text-left md:text-left">Man Jacket</h3>
+                <div class="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="single-card shadow-lg p-5 rounded-xl">
+                        <div class="card-image bg-[#F1F1F1] p-4 rounded-xl">
+                            <img class="w-9/12 m-auto" src="./images/jacket-4.png" alt="">
+                        </div>
+                        <h4 class="text-2xl mt-6">Yellow Coat Jacket </h4>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="price flex justify-between items-center">
+                            <span class="text-4xl text-[#FABE4C]">$234</span>
+                            <button class="px-6 py-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white rounded-md"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="single-card shadow-lg p-5 rounded-xl">
+                        <div class="card-image bg-[#F1F1F1] p-4 rounded-xl">
+                            <img class="w-9/12 m-auto" src="./images/jacket-5.png" alt="">
+                        </div>
+                        <h4 class="text-2xl mt-6">Ladies Jacket </h4>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="price flex justify-between items-center">
+                            <span class="text-4xl text-[#FABE4C]">$234</span>
+                            <button class="px-6 py-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white rounded-md"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="single-card shadow-lg p-5 rounded-xl">
+                        <div class="card-image bg-[#F1F1F1] p-4 rounded-xl">
+                            <img class="w-9/12 m-auto" src="./images/jacket-6.png" alt="">
+                        </div>
+                        <h4 class="text-2xl mt-6">Woman Leather Jacket </h4>
+                        <p class="my-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="price flex justify-between items-center">
+                            <span class="text-4xl text-[#FABE4C]">$234</span>
+                            <button class="px-6 py-3 bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white rounded-md"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer></footer>
+</body>
+</html>
