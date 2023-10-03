@@ -63,7 +63,7 @@
 
 
 
-       <div class="flex flex-col sm:flex-row md:flex-row text-center sm:text-left md:text-left items-center justify-between gap-4 mt-20 ">
+       <div class="flex flex-col sm:flex-row md:flex-row text-center sm:text-left md:text-left items-center justify-between gap-4 mt-5 ">
             <div class="">
                 <h2 class="text-7xl"><span class="text-[#FABE4C;] uppercase font-normal">Be the Penguins</span><br>
                     <span class="text-[#363958;]">of Winter</span></h2>
@@ -78,7 +78,38 @@
     <main>
         <section class="women-jackets py-10">
             <div class="container mx-auto px-8">
-                <h3 class="text-5xl mb-4 text-center sm:text-left md:text-left">WoMan Jacket</h3>
+                <div class="flex flex-col sm:flex-row items-center justify-between">
+                    <h3 class="text-5xl mb-4 text-center sm:text-left md:text-left">WoMan Jacket</h3>
+                    <marquee class="w-[400px] text-[#FABE4C]">Limited Offer 30% discount!</marquee>
+                    <div class="deal-countdown">
+                        <div class="grid grid-flow-col gap-5 md:justify-start justify-center text-center auto-cols-max">
+                          <div class="flex flex-col">
+                            <span class="flex justify-center gap-5 items-center">
+                              <span class="days text-2xl md:text-5xl lg:text-5xl font-extrabold"></span><i class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <span class="font-medium text-left mx-0 md:mx-4 lg:mx-4">days</span>
+                          </div> 
+                          <div class="flex flex-col">
+                            <span class="flex justify-center gap-5 items-center">
+                              <span class="hours text-2xl md:text-5xl lg:text-5xl font-extrabold"></span><i class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <span class="font-medium text-left mx-0 md:mx-4 lg:mx-4">hours</span>
+                          </div> 
+                          <div class="flex flex-col">
+                            <span class="flex justify-center gap-5 items-center">
+                              <span class="minutes text-2xl md:text-5xl lg:text-5xl font-extrabold"></span><i class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <span class="font-medium text-left mx-0 md:mx-4 lg:mx-4">min</span>
+                          </div> 
+                          <div class="flex flex-col">
+                            <span class="flex justify-center gap-5 items-center">
+                              <span class="seconds text-2xl md:text-5xl lg:text-5xl font-extrabold"></span>
+                            </span>
+                            <span class="font-medium text-left mx-0 md:mx-4 lg:mx-4">sec</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="single-card shadow-lg p-5 rounded-xl">
                         <div class="card-image bg-[#F1F1F1] p-4 rounded-xl">
@@ -209,7 +240,86 @@
                 <img class="w-[500px] mx-auto" src="./images/shopping.png" alt="">
             </div>
         </div>
-        
+        <div class="deal-countdown">
+            <div class="grid grid-flow-col gap-5 md:justify-start justify-center text-center auto-cols-max">
+              <div class="flex flex-col">
+                <span class="flex justify-center gap-5 items-center">
+                  <span class="days text-2xl md:text-5xl lg:text-5xl font-extrabold"></span><i class="fa-solid fa-ellipsis-vertical"></i>
+                </span>
+                <span class="font-medium text-left mx-0 md:mx-4 lg:mx-4">days</span>
+              </div> 
+              <div class="flex flex-col">
+                <span class="flex justify-center gap-5 items-center">
+                  <span class="hours text-2xl md:text-5xl lg:text-5xl font-extrabold"></span><i class="fa-solid fa-ellipsis-vertical"></i>
+                </span>
+                <span class="font-medium text-left mx-0 md:mx-4 lg:mx-4">hours</span>
+              </div> 
+              <div class="flex flex-col">
+                <span class="flex justify-center gap-5 items-center">
+                  <span class="minutes text-2xl md:text-5xl lg:text-5xl font-extrabold"></span><i class="fa-solid fa-ellipsis-vertical"></i>
+                </span>
+                <span class="font-medium text-left mx-0 md:mx-4 lg:mx-4">min</span>
+              </div> 
+              <div class="flex flex-col">
+                <span class="flex justify-center gap-5 items-center">
+                  <span class="seconds text-2xl md:text-5xl lg:text-5xl font-extrabold"></span>
+                </span>
+                <span class="font-medium text-left mx-0 md:mx-4 lg:mx-4">sec</span>
+              </div>
     </footer>
+
+    <script>
+        const countDownClock = (number = 100, format = 'seconds') => {
+   
+         const d = document;
+         const daysElement = d.querySelector('.days');
+         const hoursElement = d.querySelector('.hours');
+         const minutesElement = d.querySelector('.minutes');
+         const secondsElement = d.querySelector('.seconds');
+         let countdown;
+         convertFormat(format);
+         
+         
+         function convertFormat(format) {
+           switch(format) {
+             case 'seconds':
+               return timer(number);
+             case 'minutes':
+               return timer(number * 60);
+               case 'hours':
+               return timer(number * 60 * 60);
+             case 'days':
+               return timer(number * 60 * 60 * 24);             
+           }
+         }
+ 
+         function timer(seconds) {
+           const now = Date.now();
+           const then = now + seconds * 1000;
+ 
+           countdown = setInterval(() => {
+             const secondsLeft = Math.round((then - Date.now()) / 1000);
+ 
+             if(secondsLeft <= 0) {
+               clearInterval(countdown);
+               return;
+             };
+ 
+             displayTimeLeft(secondsLeft);
+ 
+           },1000);
+         }
+ 
+         function displayTimeLeft(seconds) {
+           daysElement.textContent = Math.floor(seconds / 86400);
+           hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+           minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
+           secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+         }
+       }
+ 
+ 
+       countDownClock(30, 'days');
+     </script>
 </body>
 </html>
